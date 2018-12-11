@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- load MUI -->
+    <link href="mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="mui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>多大中文申请表</title>
+  </head>
+  <body>
+    <!-- example content -->
+    <div class="mui-container">
+      <div class="mui-panel">
+        <h2>多大中文申请表</h3>
+        <form id = "hrform" class="mui-form">
+            <label>中文姓名</label>
+            <div class="mui-textfield">
+              <input id = "cname" name ="cname" type="text" placeholder="姓加名 例:李狗蛋" required>
+            </div>
+            <label>英文姓名</label>
+            <div class="mui-textfield">
+              <input id = "ename" name = "ename" type="text" placeholder="Firstname Lastname e.g. Goudan Li" required>
+            </div>
+            <label>微信号</label>
+            <div class="mui-textfield">
+                <input id = "wechat" name = "wechat" type="text" required>
+            </div>
+            <label>电话</label>
+            <div class="mui-textfield">
+                <input id = "phone" name ="phone" type="text" required>
+              </div>
+              <label>常用邮箱</label>
+              <div class="mui-textfield">
+                <input id = "email" name ="email" type="email" placeholder="" required>
+              </div>
+              <label>UT邮箱</label>
+              <div class="mui-textfield">
+                <input id = "utemail" name ="utemail" type="email" placeholder="" required>
+              </div>
+              <label>Year of Study</label>
+              <div class="mui-textfield">
+                <input id = "year" name ="year" type="text" placeholder="" required>
+              </div>
+              <label>专业</label>
+              <div class="mui-textfield">
+                <input id = "studyfield" name ="studyfield" type="text" placeholder="" required>
+              </div>
+            <label>校区</label>
+              <div class="mui-radio">
+                <label>
+                  <input type="radio"
+                         name="campus"
+                         id="UTSG"
+                         value="UTSG" required>
+                  St.George
+                </label>
+              </div>
+              <div class="mui-radio">
+                <label>
+                  <input type="radio"
+                         name="campus"
+                         id="optionsRadios2"
+                         value="UTM">
+                  Missisagua
+                </label>
+              </div>
+              <div class="mui-radio">
+                <label>
+                  <input type="radio"
+                         name="campus"
+                         id="optionsRadios3"
+                         value="UTSC">
+                  Scarborough
+                </label>
+              </div>
+            <br>
+            <label>你为什么想加入我们？你希望从多大中文获得什么、对你未来的职业发展有什么帮助？</label>
+            <div class="mui-textfield">
+              <textarea id = "q1" name = "q1"placeholder="中英文皆可，三百字以内。" required></textarea>  
+            </div>
+            <label>简单描述你想在十年之后达到怎样的个人目标，并且说明你如何使用自己达成这个目标。</label>
+            <div class="mui-textfield">
+                <textarea id = "q2" name = "q2" placeholder="中英文皆可，三百字以内。" required></textarea>
+              </div>
+            <label>用一句话或者一个词描述一下自己，并说明为什么。</label>
+            <div class="mui-textfield">
+                <textarea  id = "q3" name = "q3" placeholder="中英文皆可，三百字以内。" required></textarea>
+              </div>
+            <label>第一志愿</label>
+            <div class="mui-select">
+            <select id="pos1" name="pos1" required>
+                <option value="edt">Editor, Editorial</option>
+                <option value="vddna">Visual Designer, Design and Art</option>
+                <option value="pgdna">Photographer, Design and Art</option>
+                <option value="vdna">Videographer, Design and Art</option>
+                <option value="mkt">General Representative Marketing</option>
+                <option value="sp">General Representative Sponsorship</option>
+                <option value="gp">General Representative Growth and Partnership</option>
+                <option value="is">Application Developer, Information Solution</option>
+                <option value="na">我暂时不知道</option>
+            </select>
+            <label>如果你不知道自己想去哪个部门，请选择“我暂时不知道”。HR部门会根据你提供的其他申请资料向合适的部门推荐。</label>
+            </div>
+            <label>第二志愿</label>
+            <div class="mui-select">
+            <select id="pos2" name="pos2" >
+                <option value="edt">Editor, Editorial</option>
+                <option value="vddna">Visual Designer, Design and Art</option>
+                <option value="pgdna">Photographer, Design and Art</option>
+                <option value="vdna">Videographer, Design and Art</option>
+                <option value="mkt">General Representative Marketing</option>
+                <option value="sp">General Representative Sponsorship</option>
+                <option value="gp">General Representative Growth and Partnership</option>
+                <option value="is">Application Developer, Information Solution</option>
+                <option value="na">我暂时不知道</option>
+            </select>
+            </div>
+            <label>第三志愿</label>
+            <div class="mui-select">
+            <select id="pos3" name="pos3">
+                <option value="edt">Editor, Editorial</option>
+                <option value="vddna">Visual Designer, Design and Art</option>
+                <option value="pgdna">Photographer, Design and Art</option>
+                <option value="vdna">Videographer, Design and Art</option>
+                <option value="mkt">General Representative Marketing</option>
+                <option value="sp">General Representative Sponsorship</option>
+                <option value="gp">General Representative Growth and Partnership</option>
+                <option value="is">Application Developer, Information Solution</option>
+                <option value="na">我暂时不知道</option>
+            </select>
+            </div>
+            <button type="submit" id="done" class="mui-btn mui-btn--raised">Submit</button>
+          </form>
+
+         
+      </div>
+    </div>
+    <script>
+    $("#done").submit(function(e) {
+        var form = $(this);
+        var url = 'localhost:5000';
+        alert(url)
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(), 
+            success: function(data, status, xhr)
+            {
+                alert(data); // show response from the php script.
+                $('#hrform')[0].reset();
+            },
+            error: function(xhr, errorType, error) {
+                alert('error')
+            }
+            });
+
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+        }); 
+    </script>
+  </body>
